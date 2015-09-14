@@ -1,0 +1,174 @@
+.navbar {
+  background-color: #efefef;
+  padding-left:2rem;
+  padding-top:1.2rem;
+  z-index: 250;
+  border-top:1px solid $gray;
+}
+
+.full-width {
+  width:100%;
+  text-align:center;
+}
+.well h3{
+  border-bottom:none;
+}
+.form-inline input, .form-group input {
+  border-bottom-color: $gray-lighter;
+}
+.input-group input {
+  margin-top:0;
+}
+.form-input {
+  max-width: 600px;
+}
+input[type=text], input[type=password], input[type=email], input[type=phone], input[type=url] {
+  border:1px solid #cccccc;
+}
+select.form-control {
+  margin-top:0;
+}
+
+//== Animations
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.animate-enter {
+  -webkit-animation: enter 250ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  animation: enter 250ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  display: block;
+  position: relative;
+}
+@-webkit-keyframes enter {
+  from {
+    opacity: 0;
+    height: 0px;
+    left: -70px;
+  }
+  75% {
+    left: 15px;
+  }
+  to {
+    opacity: 1;
+    height: 30px;
+    left: 0px;
+  }
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    height: 0px;
+    left: -70px;
+  }
+  75% {
+    left: 15px;
+  }
+  to {
+    opacity: 1;
+    height: 30px;
+    left: 0px;
+  }
+}
+
+.animate-leave {
+  -webkit-animation: leave 250ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  animation: leave 250ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  display: block;
+  position: relative;
+}
+@-webkit-keyframes leave {
+  to {
+    opacity: 0;
+    height: 0px;
+    left: -70px;
+  }
+  25% {
+    left: 15px;
+  }
+  from {
+    opacity: 1;
+    height: 30px;
+    left: 0px;
+  }
+}
+@keyframes leave {
+  to {
+    opacity: 0;
+    height: 0px;
+    left: -70px;
+  }
+  25% {
+    left: 15px;
+  }
+  from {
+    opacity: 1;
+    height: 30px;
+    left: 0px;
+  }
+}
+
+
+/* Navtabs */
+
+// Tabs
+// -------------------------
+
+// Give the tabs something to sit on
+.nav-tabs {
+  border-bottom: none;
+  > li {
+    font-weight:bold;
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: 0;
+
+    // Actual tabs (as links)
+    > a {
+      margin-right: 2px;
+      line-height: $line-height-base;
+      border: 3px solid transparent;
+      border-radius: 0;
+      &:hover {
+        background-color:$gray-lighter;
+        color:$blue;
+        border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $nav-tabs-active-link-hover-color;
+        background-color: $nav-tabs-active-link-hover-bg;
+        border: 3px solid transparent;
+        border-bottom: 3px solid $blue;
+        cursor: default;
+      }
+    }
+  }
+}
+//== Tabs
+$nav-tabs-border-color:                     $gray !default;
+$nav-tabs-link-hover-border-color:          $gray-lighter !default;
+
+$nav-tabs-active-link-hover-bg:             $gray-lighter !default;
+$nav-tabs-active-link-hover-color:          #000000 !default;
+$nav-tabs-active-link-hover-border-color:   #ddd !default;
+
+.btn-left {
+  text-align: left;
+}
+.no-margin {
+  margin:0;
+}
+.table-hover {
+  > tbody > tr:hover {
+    background-color: $faded-blue;
+  }
+}

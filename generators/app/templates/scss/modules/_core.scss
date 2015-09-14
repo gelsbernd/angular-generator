@@ -1,0 +1,414 @@
+h2 {
+  color: $gray;
+  font-size: 2rem;
+}
+
+.options {
+  margin-top: 2rem;
+  h2 {
+    color: $gray;
+    font-size: 2rem;
+    margin-top: .2rem;
+  }
+  a, a:hover {
+    color: black;
+  }
+  .fa {
+    color: $blue;
+    font-size: 4rem;
+    margin-top: 2rem;
+  }
+  @include mq(992px) {
+    margin-top: 8rem;
+    text-align: center;
+    .fa {
+      font-size: 8rem;
+      margin-top: 0;
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.wizardbody {
+  .nav {
+    padding-top: 2rem;
+  }
+  textarea {
+    width: 100%;
+  }
+  h2 {
+    color: $orange;
+    margin-top: 1rem;
+  }
+  h3 {
+    color: $dark-gray;
+  }
+  @include mq(992px) {
+    min-height: 600px;
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.well {
+  p, h2 {
+    padding-bottom: 2rem;
+  }
+}
+
+.fab {
+  position: relative;
+  vertical-align: bottom;
+  bottom: 0;
+  float: right;
+  height: 60px;
+  width: 60px;
+  margin-top: 1px;
+  margin-right: 1px;
+  border: 0;
+  border-radius: 30px;
+  background-color: $blue;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  box-shadow: 2px 2px 1px $gray;
+  span {
+    vertical-align: bottom;
+  }
+}
+
+.fab:hover {
+  height: 62px;
+  width: 62px;
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.fab:active {
+  background-color: $orange;
+}
+
+/* form styling */
+#form-container {
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+#form-container .page-header {
+  background: #fff;
+  margin: 0;
+  padding: 30px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* numbered wizard buttons */
+#status-buttons {
+}
+
+#status-buttons a {
+  background-color: #ccc;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: left;
+  text-transform: uppercase;
+  border-radius: 10px;
+  height: 3.5rem;
+  margin: 0 1rem;
+  min-width: 10rem;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+#status-buttons a:hover {
+  background-color: #999;
+  text-decoration: none;
+  color: #fff;
+}
+
+#status-buttons a.active {
+  background-color: $blue;
+  text-decoration: none;
+}
+
+#status-buttons span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* we will style the span */
+#status-buttons span.stepnumber {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 4.5rem;
+  margin-top: -1.2rem;
+  padding-top: 0;
+  margin-right: .5rem;
+  margin-left: .5rem;
+  vertical-align: top;
+}
+
+/* ANIMATION STYLINGS
+============================================================================= */
+#signup-form {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  @include mq(992px) {
+    padding: 30px;
+  }
+}
+
+#form-views {
+  width: auto;
+}
+
+/* basic styling for entering and leaving */
+/* left and right added to ensure full width */
+#form-views.ng-enter,
+#form-views.ng-leave {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -webkit-transition: 0.5s all ease;
+}
+
+/* enter animation */
+#form-views.ng-enter {
+  -webkit-animation: slideInRight 0.5s both ease;
+  -moz-animation: slideInRight 0.5s both ease;
+  animation: slideInRight 0.5s both ease;
+}
+
+/* leave animation */
+#form-views.ng-leave {
+  -webkit-animation: slideOutLeft 0.5s both ease;
+  -moz-animation: slideOutLeft 0.5s both ease;
+  animation: slideOutLeft 0.5s both ease;
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* slide out to the left */
+@keyframes slideOutLeft {
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@-moz-keyframes slideOutLeft {
+  to {
+    -moz-transform: translateX(-200%);
+  }
+}
+
+@-webkit-keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-200%);
+  }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideInRight {
+  from {
+    -moz-transform: translateX(200%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+
+/* Table Display of columns */
+.nametag {
+  border: 1px solid $gray;
+  border-radius: 10px;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  .row {
+    margin-top: 1rem;
+    .tablelabel {
+      color: $gray;
+      padding-top: 1rem;
+      @include mq(992px) {
+        text-align: right;
+        padding-top: 0;
+      }
+    }
+    .btn {
+      margin-left: 2rem;
+    }
+  }
+}
+
+/* Checkboxes */
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.checkbox label {
+  display: inline-block;
+  position: relative;
+  margin-right: 5rem;
+}
+
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-size: 11px;
+  color: #555555;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.checkbox input[type="checkbox"]:checked + label::after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+
+.checkbox input[type="checkbox"]:disabled + label {
+  opacity: 0.65;
+}
+
+.checkbox input[type="checkbox"]:disabled + label::before {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+
+.checkbox.checkbox-circle label::before {
+  border-radius: 50%;
+}
+
+.checkbox.checkbox-inline {
+  margin-top: 0;
+}
+
+.checkbox-primary input[type="checkbox"]:checked + label::before {
+  background-color: $blue;
+  border-color: $dark-blue;
+}
+
+.checkbox-primary input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.checkbox-danger input[type="checkbox"]:checked + label::before {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.checkbox-danger input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.checkbox-info input[type="checkbox"]:checked + label::before {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.checkbox-info input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.checkbox-warning input[type="checkbox"]:checked + label::before {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.checkbox-warning input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+.checkbox-success input[type="checkbox"]:checked + label::before {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.checkbox-success input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+input[type=checkbox] {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.1); /* IE */
+  -moz-transform: scale(1.1); /* FF */
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -o-transform: scale(1.1); /* Opera */
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.toggleline {
+  margin: 2rem 0 3rem 0;
+  vertical-align: text-bottom;
+  input[type=checkbox] {
+    margin-top: -.4rem;
+  }
+}
+
+.enrollmentdates {
+  .row {
+    .tablelabel {
+      margin-top: 2rem;
+    }
+  }
+  textarea {
+    margin-top: 1rem;
+  }
+}
