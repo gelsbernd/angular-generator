@@ -15,7 +15,7 @@ var BaseAppGenerator = yeoman.generators.Base.extend({
     askForProjectName: function ask(){
       var done = this.async();
 
-      console.log(chalk.magenta('Kickin this thing off...'));
+      console.log(chalk.magenta('Let\'s kick this pig...'));
 
       var prompts = [{
         name: 'projectName',
@@ -24,7 +24,7 @@ var BaseAppGenerator = yeoman.generators.Base.extend({
       },{
         name: 'projectDescription',
         message: 'Project Description',
-        default: 'My app is cool, you know you like it.'
+        default: 'This app is functional, performant, usable and aesthetically pleasing.'
       }];
 
       this.prompt(prompts, function(props){
@@ -50,24 +50,15 @@ var BaseAppGenerator = yeoman.generators.Base.extend({
     this.copy('gulpfile.js');
 
 
-    this.mkdir('assets');
-    this.mkdir('assets/css');
     this.template('assets/css/main.css', 'assets/css/main.css');
 
-    this.mkdir('scss');
     this.template('scss/main.scss', 'scss/main.scss');
-    this.mkdir('scss/base');
     this.template('scss/base/_layout.scss', 'scss/base/_layout.scss');
     this.template('scss/base/_variables.scss', 'scss/base/_variables.scss');
-    this.mkdir('scss/modules');
     this.template('scss/modules/_core.scss', 'scss/modules/_core.scss');
-    this.mkdir('scss/overrides');
     this.template('scss/overrides/_bootstrap.scss', 'scss/overrides/_bootstrap.scss');
-    this.mkdir('scss/tools');
     this.template('scss/tools/_mixins.scss', 'scss/tools/_mixins.scss');
 
-    this.mkdir('modules');
-    this.mkdir('modules/core');
     this.template('modules/app.module.js', 'modules/app.module.js');
 
     this.directory('modules/core');
